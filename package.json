@@ -1,0 +1,22 @@
+{
+  "name": "echonestjs",
+  "version": "0.0.1",
+  "description": "Echonest api client",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dinostheo/echonestjs.git"
+  },
+  "keywords": [
+    "echonest"
+  ],
+  "author": "Dinos Theodorou <dinostheo@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dinostheo/echonestjs/issues"
+  },
+  "homepage": "https://github.com/dinostheo/echonestjs"
+}
