@@ -1,6 +1,6 @@
 {
   "name": "echonestjs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Echonest api client",
   "main": "index.js",
   "scripts": {
@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/dinostheo/echonestjs/issues"
   },
-  "homepage": "https://github.com/dinostheo/echonestjs"
+  "homepage": "https://github.com/dinostheo/echonestjs",
+  "dependencies": {
+    "request": "^2.53.0"
+  }
 }
