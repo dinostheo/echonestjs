@@ -1,10 +1,8 @@
 echonestjs
 ==========
+[![wercker status](https://app.wercker.com/status/b0a69be62c6e329881c0840bff3caa5e/s "wercker status")](https://app.wercker.com/project/bykey/b0a69be62c6e329881c0840bff3caa5e)
 
 Simple node.js client for querying the echonest api.
-
-## Status
-[![wercker status](https://app.wercker.com/status/b0a69be62c6e329881c0840bff3caa5e/s "wercker status")](https://app.wercker.com/project/bykey/b0a69be62c6e329881c0840bff3caa5e)
 
 ## Installation
 ```
