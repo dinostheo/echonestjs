@@ -12,7 +12,7 @@ Simple node.js client for querying the echonest api.
 ```
   setKey('YOUR ECHONEST API KEY');
 
-  query('echonest/endpoint', {'the necessary parameters'}, callback);
+  get('echonest/endpoint', {'the necessary parameters'}, callback);
 ```
 
 e.g.
@@ -22,7 +22,7 @@ e.g.
 
   echonest.setKey('123456789');
 
-  echonest.query('song/search', { artist: "led zeppelin" }, function (err, res) {
+  echonest.get('song/search', { artist: "led zeppelin" }, function (err, res) {
       if (err) {
         console.log(err);
       } else {
