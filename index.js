@@ -25,19 +25,19 @@ module.exports = {
      * @param  {Function} done     Callback function that takes err and result as parameters.
      */
     get: function (endpoint, params, done) {
-        if (!API_KEY.trim()) {
+        if (!API_KEY || !API_KEY.trim()) {
             return done({
                 message: 'API KEY is not set.'
             });
         }
 
         var base_url = 'http://developer.echonest.com',
-            path = '/api/v4/' + endpoint + '?api_key=' +  API_KEY,
+            path = '/api/v4/' + endpoint + '?api_key=' +  API_KEY + '&format=json',
             params = params ? '&' + qs.stringify(params) : '';
 
         request(base_url + path + params, function (err, response, body) {
-            if (err) {
-                return done(err);
+            if (err || response.statusCode !== 200) {
+                return done(err || body);
             }
 
             done(null, JSON.parse(body));

@@ -31,6 +31,26 @@ e.g.
   });
 ```
 
+## Tests
+To run the tests simply execute:
+```
+    npm test
+```
+
+The tests have a dependency of a configuration file config/config.js of the following structure:
+```
+/**
+ * Module configuration.
+ *
+ * Contains the echonest api key for the tests.
+ *
+ * config/config.js
+ */
+module.exports = {
+    api_key: 'PLACE YOUR ECHONEST API KEY HERE'
+};
+```
+
 ## Dependencies
 
 [request](https://github.com/request/request)
