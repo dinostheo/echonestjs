@@ -6,7 +6,7 @@ build:
     # A step that sets up the git ignored config.js file
     - script:
         name: config file
-        code: echo "dule.exports = {api_key: $echonest_api_key}; >> "
+        code: echo "module.exports = {api_key:$echonest_api_key};" >> config/config.js
     # A step that executes `npm install` command
     - npm-install
     # A step that executes `npm test` command
