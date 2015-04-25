@@ -4,17 +4,17 @@
 var request = require('request'),
     qs = require('querystring');
 
-var API_KEY;
+var Echonest = new Function();
 
-module.exports = {
+Echonest.prototype = {
 
     /**
-     * Sets the API KEY for echonest.
+     * Initializes the echonest module and sets the api keu.
      *
      * @param {String} key The echonest developer API KEY
      */
-    setKey: function (key) {
-        API_KEY = key;
+    init: function (key) {
+        this.api_key = key;
     },
 
     /**
@@ -25,14 +25,14 @@ module.exports = {
      * @param  {Function} done     Callback function that takes err and result as parameters.
      */
     get: function (endpoint, params, done) {
-        if (!API_KEY || !API_KEY.trim()) {
+        if (!this.api_key || !this.api_key.trim()) {
             return done({
                 message: 'API KEY is not set.'
             });
         }
 
         var base_url = 'http://developer.echonest.com',
-            path = '/api/v4/' + endpoint + '?api_key=' +  API_KEY + '&format=json',
+            path = '/api/v4/' + endpoint + '?api_key=' +  this.api_key + '&format=json',
             params = params ? '&' + qs.stringify(params) : '';
 
         request(base_url + path + params, function (err, response, body) {
@@ -43,5 +43,6 @@ module.exports = {
             done(null, JSON.parse(body));
         });
     }
-
 }
+
+module.exports = new Echonest();

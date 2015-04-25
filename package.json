@@ -1,6 +1,6 @@
 {
   "name": "echonestjs",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Echonest api client",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,8 @@
     "url": "https://github.com/dinostheo/echonestjs.git"
   },
   "keywords": [
-    "echonest"
+    "echonest",
+    "express"
   ],
   "author": "Dinos Theodorou <dinostheo@gmail.com>",
   "license": "MIT",

@@ -10,20 +10,25 @@ Simple node.js client for querying the echonest api.
 ```
 
 ## Usage
-```
-  setKey('YOUR ECHONEST API KEY');
 
-  get('echonest/endpoint', {'the necessary parameters'}, callback);
+The echonestjs module exposes a singleton object, which you can initialize once
+with the api key, which is handy to use with application frameworks such as express.
+```
+  var Echonest = require('echonestjs');
+
+  Echonest.init('YOUR ECHONEST API KEY');
+
+  Echonest.get('echonest/endpoint', {'the necessary parameters'}, callback);
 ```
 
 e.g.
 
 ```
-  var echonest = require('echonestjs');
+  var Echonest = require('echonestjs');
 
-  echonest.setKey('123456789');
+  Echonest.init('123456789');
 
-  echonest.get('song/search', { artist: "led zeppelin" }, function (err, res) {
+  Echonest.get('song/search', { artist: "led zeppelin" }, function (err, res) {
       if (err) {
         console.log(err);
       } else {
